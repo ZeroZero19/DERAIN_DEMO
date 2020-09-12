@@ -49,3 +49,5 @@ python3 test.py --data testset/raindrop_test_a --out result/raindrop_test_a --ch
 [1] [Semantic Segmentation on MIT ADE20K dataset in PyTorch](https://github.com/CSAILVision/semantic-segmentation-pytorch/tree/cityscapes) 
 
 [2] [Attentive Generative Adversarial Network for Raindrop Removal from A Single Image (CVPR'2018)](https://github.com/rui1996/DeRaindrop)
+
+[3] [Restoring An Image Taken Through a Window Covered with Dirt or Rain](https://cs.nyu.edu/~deigen/rain/)
