@@ -2,7 +2,8 @@
 ## Needed 
 1. Python 3.6
 2. Pytorch 1.0.0
-3. Semantic Segmentation[1]
+3. pytorch-fid
+4. Semantic Segmentation[1]
 ```
 git clone  --single-branch --branch cityscapes https://github.com/CSAILVision/semantic-segmentation-pytorch.git semantic
 curl http://sceneparsing.csail.mit.edu/model/pytorch/ade20k-resnet50dilated-ppm_deepsup/decoder_epoch_20.pth --create-dirs -o semantic/ade20k-resnet50dilated-ppm_deepsup/decoder_epoch_20.pth
@@ -13,18 +14,28 @@ curl http://sceneparsing.csail.mit.edu/model/pytorch/ade20k-resnet50dilated-ppm_
 from lib.nn import SynchronizedBatchNorm2d    ---->   from semantic.lib.nn import SynchronizedBatchNorm2d
 ``` 
 ## Dataset
-1. Download our data from [link]()
+1. Download our testset from [link](https://drive.google.com/file/d/1D0n4fD25TyDTcwda7flGS6SMQnQyKZu4/view?usp=sharing)
 2. Download raindrop[2] testset from [link](https://drive.google.com/open?id=1e7R76s6vwUJxILOcAsthgDLPSnOrQ49K)
 ## Model
-Download all model from [link]()
+Download all model from [link](https://drive.google.com/drive/folders/1UNDkTP3BDKhvge3TLSBfFFuSqvhW8TIO?usp=sharing)
 ## Run
-Derain our testset
+1. Derain our testset
 ```
 python3 test.py --data testset/our_testset --out result/our_testset --checkpoints checkpoints/M2GAN_our_testset
 python3 test.py --data testset/our_testset --out result/our_testset --checkpoints checkpoints/No_Seg
 python3 test.py --data testset/our_testset --out result/our_testset --checkpoints checkpoints/No_Disc
 ```
-Derain raindrop dataset test a
+Result sample
+
+a. Rain
+![rain](imgs/290_rain.png)
+b. M2GAN derain
+![derain](imgs/290_M2GAN-our-testset.png)
+c. Ground truth
+![gt](imgs/290_clean.png)
+
+
+2. Derain raindrop dataset test a
 ```
 python3 test.py --data testset/raindrop_test_a --out result/raindrop_test_a --checkpoints checkpoints/M2GAN_raindrop
 ```
