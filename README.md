@@ -25,13 +25,17 @@ python3 test.py --data testset/our_testset --out result/our_testset --checkpoint
 python3 test.py --data testset/our_testset --out result/our_testset --checkpoints checkpoints/No_Seg
 python3 test.py --data testset/our_testset --out result/our_testset --checkpoints checkpoints/No_Disc
 ```
+
 Result sample
 
 a. Rain
+
 ![rain](imgs/290_rain.png)
 b. M2GAN derain
+
 ![derain](imgs/290_M2GAN-our-testset.png)
 c. Ground truth
+
 ![gt](imgs/290_clean.png)
 
 
